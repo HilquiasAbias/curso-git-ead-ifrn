@@ -1,0 +1,30 @@
+git init
+git config --local user.name "HilquiasAbias"
+git config --local user.email "hilquias.dev@gmail.com"
+git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead
+echo "uma linha qualquer de conteúdo" >> texto.txt
+rm -rf curso-branchs-ifrn-ead/.git/
+git add .
+git commit -m "primeiro commit"
+git branch -M main
+git remote add origin https://github.com/HilquiasAbias/curso-git-ead-ifrn.git
+git push -u origin main
+git fetch
+git checkout feature-1 
+vi texto.txt 
+git add texto.txt 
+git commit -m "segundo commit"
+git push
+git checkout main 
+git add .
+git commit -m "terceiro commit"
+git merge feature-1
+vi texto.txt // resolvendo conflito
+git push
+git branch add-comandos
+git checkout add-comandos  
+touch comandos.txt
+vi comandos.txt
+git add .
+git commit -m "quarto commit"
+git push
